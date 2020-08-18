@@ -22,6 +22,7 @@ class App extends PureComponent {
       { id: 3, name: "Vyshnavi", age: 5, dob: "29-07-2014" },
       { id: 4, name: "Vedashree", age: 2, dob: "23-05-2016" },
       { id: 5, name: "Vrinda", age: 0, dob: "07-04-2019" },
+      { id: 6, name: "Arjun", age: 0, dob: "07-04-2023" },
     ],
     Teachers: [
       { id: 1, name: "Teacher-Ram", course: "MCSC" },
