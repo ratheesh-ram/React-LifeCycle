@@ -1,0 +1,33 @@
+.Student {
+
+  width: 25%;
+  margin: 5px 10px;
+  height: auto;
+  background-color: whitesmoke;
+  display: inline-block;
+    border: 1px solid green;
+  /* offset-x | offset-y | color 
+     box-shadow: 60px -16px teal;
+  */
+
+  /* offset-x | offset-y | blur-radius | color
+    box-shadow: 10px 5px 5px black;
+  */
+
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 1px 1px 5px 0.5px rgba(0, 0, 0, 0.2);
+}
+
+.Student:hover{
+    background-color: dodgerblue;
+}
+
+.Student p.red {
+  color: red;
+}
+
+.Student button {
+    display: inline-block;
+    margin: 0 5px;
+    color: red;
+  }
