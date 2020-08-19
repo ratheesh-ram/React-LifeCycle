@@ -1,52 +1,48 @@
-import React, { Component } from 'react';
-import Teacher from './Teacher/Teacher';
+import React, { Component } from "react";
+import Teacher from "./Teacher/Teacher";
 
 class Teachers extends Component {
-    // constructor(props){
-    //     super(props);
-    // }
+  // constructor(props){
+  //     super(props);
+  // }
 
+  // static getDerivedStateFromProps(props,state){
+  //     console.log('[Teachers.js] getDerivedStateFromProps' );
+  //     return state;
+  // }
 
-    // static getDerivedStateFromProps(props,state){
-    //     console.log('[Teachers.js] getDerivedStateFromProps' );
-    //     return state;
-    // }
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log("[Teachers.js] shouldComponentUpdate");
+    return true;
+  }
 
-    shouldComponentUpdate(nextProps, nextState){
-        console.log('[Teachers.js] shouldComponentUpdate' );
-        return true;
-    }
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    console.log("[Teachers.js] getSnapshotBeforeUpdate");
+    return null;
+  }
 
-    getSnapshotBeforeUpdate(prevProps,prevState){
-        console.log('[Teachers.js] getSnapshotBeforeUpdate');
-        return null;
-    }
-    
-    //componentWillUnmount will be used for cleanup work
-    componentWillUnmount(){
-        console.log('[Teachers.js] componentWillUnmount');
-    }
+  //componentWillUnmount will be used for cleanup work
+  componentWillUnmount() {
+    console.log("[Teachers.js] componentWillUnmount");
+  }
 
-    componentDidUpdate(){
-        console.log('[Teachers.js] componentDidUpdate');
-       
-    }
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log("[Teachers.js] componentDidUpdate");
+  }
 
-
-    render() {
-        console.log('[Teachers.js] rendering');
-        return (
-            this.props.Teachers.map(t => {
-                return <Teacher 
-                    name={t.name}
-                    course={t.course}
-                    key={t.id}
-                    changed={(event)=>this.props.changeName(event,t.id)}
-                     />
-            })
-        );
-    }
-
+  render() {
+    console.log("[Teachers.js] rendering");
+    return this.props.Teachers.map((t) => {
+      return (
+        <Teacher
+          name={t.name}
+          course={t.course}
+          key={t.id}
+          changed={(event) => this.props.changeName(event, t.id)}
+        />
+      );
+    });
+  }
 }
 
 export default Teachers;
